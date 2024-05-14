@@ -1,0 +1,141 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Source Code Pro', monospace;
+    background-color: #f5f5f5;
+    display: grid;
+    justify-content: center;
+    padding-top: 10px;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#353535);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#353535, #353535);
+    border-radius: 10px;
+}
+.design{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+}
+#b{
+    z-index: -1;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+    letter-spacing: 30px;
+    color: black;
+    font-family: sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    opacity: 0.1;
+    margin: 0;
+    padding: 0;
+}
+#z{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+    letter-spacing: 17px;
+    color: black;
+    font-family: sans-serif;
+    -webkit-text-stroke-width: 2px;
+    opacity: 0.1;
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 500px;
+    height: auto;
+    background-color: #f5f5f5;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 0px 15px 15px 15px;
+    border-radius: 5px;
+}
+h2 {
+    text-align: center;
+    font-family: 'Teko', sans-serif;
+    font-size: 45px;
+}
+.products{
+    width: 100%;
+    height: auto;
+    background-color: #e1e1e1;
+    border-radius: 10px;
+    padding: 4px;
+}
+b{
+    font-family: 'Teko', sans-serif;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+h4{
+    font-family: 'Teko', sans-serif;
+    margin: 0 auto;
+    font-size: 38px;
+    width: max-content;
+    letter-spacing: 1px;
+    margin-top: 100px; 
+}
+input{
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    background: transparent;
+    border: 1px solid #777777;
+    border-radius: 5px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: black;
+    margin-bottom: 17px;
+}
+button{
+    border-radius: 58px;
+    padding: 17px;
+    letter-spacing: 0px;
+    font-size: 15px;
+    font-family: 'Source Code Pro', monospace;
+    border: 1px solid;
+    color: white;
+    background-color: #353535;
+    transition: 0.3s;
+    cursor: pointer;
+    padding-left: 91px;
+    padding-right: 91px;
+    margin: 0 auto;
+    margin-top: 20px;
+    width: 100%;
+}
+button:hover{
+    color: #353535;
+    transition: 0.3s;
+    scale: 1.05;
+    background-color: white;
+}
+form{
+    margin-top: 10px;
+}
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #f9f9f9;
+}
+option {
+    padding: 15px;
+}

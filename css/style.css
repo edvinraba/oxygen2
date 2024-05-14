@@ -1,0 +1,1401 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Source Code Pro', monospace;
+    padding: 30px;
+    padding-bottom: 0;
+    background-color: #f5f5f5;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#353535);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#353535, #353535);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background:#f5f5f5;
+}
+nav{
+    width: 100%;
+    height: 90px;
+    background-color:#f5f5f5;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+}
+nav #bag{
+    position: absolute;
+    left: 87%;
+    cursor: pointer;
+}
+nav #menu{
+    margin-top: 36px;
+    position: absolute;
+    left: 77%;
+    display: none;
+}
+nav #user{
+    position: absolute;
+    left: 84%;
+    cursor: pointer;
+    width: 27px;
+    height: 27px;
+    margin-top: 31px;
+}
+nav #menu i {
+    transition: transform 0.3s ease;
+}
+nav #menu.active i {
+    transform: rotate(90deg);
+}
+nav #ul1 li span{
+    transition: 0.5s;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+nav ul li{
+    padding: 20px;
+    font-size: 21px;
+    transition: 0.5s;
+}
+nav a{
+    text-decoration: none;
+    color: black;
+}
+nav #ul1 li #l4{
+    background-color: #353535;
+    color: white;
+    padding: 8px 18px;
+    border-radius: 58px;
+    transition: all .3s;
+    letter-spacing: 0px;
+}
+nav #ul1 li #l4:hover{
+    border: 1px solid;
+    color: #353535;
+    transition: 0.3s;
+    scale: 1.06;
+    background-color: white;
+}
+nav #logo{
+    position: absolute;
+    width: 268px;
+    height: 200px;
+    float: left;
+    margin-top: -54px;
+    left: 40px;
+    animation-name: logoanm;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+}
+@keyframes logoanm{
+    from{
+        width: 0;
+    }
+    to{
+        width: 268px;
+    }
+}
+.cart {
+    margin-right: 13px;
+    display: grid;
+    padding: 20px;
+    width: 410px;
+    position: absolute;
+    float: right;
+    right: 16px;
+    z-index: 9;
+    background: white;
+    top: 90px;
+}
+.prodk{
+    z-index: 999;
+    position: fixed;
+    font-family: Arial, sans-serif;
+    display: grid;
+    margin-top: 28px;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    opacity: 0;
+    left: 33%;
+}
+.success-icon {
+    color: #4CAF50;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.success-message {
+    font-size: 18px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.cart #btncart{
+    border-radius: 58px;
+    padding: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+    letter-spacing: 0px;
+    font-size: 15px;
+    font-family: 'Source Code Pro', monospace;
+    border: 1px solid;
+    color: white;
+    background-color: #353535;
+    transition: 0.3s;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.cart #btncart:hover{
+    color: #353535;
+    transition: 0.3s;
+    scale: 1.06;
+    background-color: white;
+}
+.cart-item-content{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.cart-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 37px;
+}
+.cart-items {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    max-height: 300px;
+    min-height: 50px;
+    overflow: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-items li{
+    font-size: 16px;
+}
+.cart .total-price{
+    float: right;
+}
+.item-info span{  
+    margin-left: 27px;
+    position: relative;
+    top: 28px;
+}
+.remove-from-cart{
+    width: 40px;
+    height: 40px;
+    position: relative;
+    left: 36px;
+    top: 27px;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.remove-from-cart:hover{
+    scale: 1.15;
+    transition: 0.3s;
+}
+.cart img{
+    width: 90px;
+    height: 90px;
+}
+.design{
+    width: 100%;
+    height: 615px;
+    position: relative;
+    background-color: #ebebeb;
+    top: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.design .main{
+    width: 1146px;
+    height: 619px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.design .main #h1{
+    font-family: 'Teko', sans-serif;
+    height: 0;
+    font-size: 160px;
+    width: 0;
+    position: relative;
+    top: 228px;
+    z-index: 4;
+    left: -157px;
+    letter-spacing: 12px;
+    color: #353535;
+    transform: rotate(10px);
+}
+.design .main #hood{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    z-index: 1;
+}
+.design .main #h2{
+    font-family: 'Teko', sans-serif;
+    height: 0;
+    font-size: 160px;
+    width: 0;
+    position: relative;
+    top: 228px;
+    left: -40px;
+    letter-spacing: 12px;
+    color: #353535;
+    transform: rotate(10px);
+}
+.design .main #p1{
+    font-family: 'Teko', sans-serif;
+    position: relative;
+    color: #353535;
+    letter-spacing: 2px;
+    top: 244px;
+    height: 0;
+    left: -61px;
+    font-size: 27px;
+}
+.design .main #p2{
+    font-family: 'Teko', sans-serif;
+    position: relative;
+    color: #353535;
+    letter-spacing: 2px;
+    top: 385px;
+    right: -66px;
+    font-size: 27px;
+    height: 0;
+}
+.design .main .images{
+    width: 454px;
+    height: 113px;
+    position: absolute;
+    display: flex;
+    bottom: 0;
+}
+
+.design .main .images .imgs{
+    transition: 1s;
+    width: 100px; 
+    height: 122px;
+    cursor: pointer;
+    opacity: 0.3;
+}
+.design .main .images .imgs:hover{
+    transform: translateY(-20px);
+    transition: 1s;
+    opacity: 1;
+}
+.newarr{
+    position: relative;
+    top: 40px;
+    width: 100%;
+    height: 300px;
+}
+.newarr h1{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+    margin-top: -5px;
+    margin-left: 17px;
+    letter-spacing: 35px;
+    color: black;
+    font-family: sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    opacity: 0.1;
+}
+.newarr .div{
+    width: 100%;
+    height: 215px;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    top: 15%;
+}
+.newarr h2{
+    font-size: 164px;
+    font-family: 'Teko', sans-serif;
+    color: #353535;
+    letter-spacing: 20px;
+    opacity: 1;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+    margin-top: 65px;
+}
+.product {
+    text-align: center;
+    height: 341px;
+    transition: 0.5s;
+    font-size: 18px;
+    overflow: hidden;
+}
+.product:hover{
+    scale: 0.96;
+    transition: 0.5s;
+}
+.product img{
+    width: 200px;
+    height: 250px;
+    transition: 0.5s;
+}
+.products .product .imgdiv{
+    width: 100%;
+    height: 265px;
+    background-color: #e1e1e1;
+    display: flex;
+    justify-content: center;
+    border-radius: 7px;
+}
+.products .product  p{
+    font-size: 23px;
+    font-family: 'Teko', sans-serif;
+    display: block;
+    text-align: left;
+    letter-spacing: 1px;
+    margin-left: 5px;
+}
+.products .product button{
+    padding: 9px;
+    border: 0;
+    border-radius: 14px;
+    position: relative;
+    top: -46px;
+    text-align: center;
+    left: 37%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.products .product button:hover{
+    scale: 1.10;
+    transition: 0.3s;
+}
+.firm{
+    position: relative;
+    width: 100%;
+    height: 175px;
+    top: 33px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 7px;
+    padding-right: 7px;
+}
+.brands{
+    filter: grayscale(100%);
+    transition: 0.5s;
+}
+.brands:hover{
+    filter: grayscale(0);
+    transform: scale(1.08);
+}
+.firm #lac{
+    width: 179px;
+    height: 170px;
+    margin-top: -16px;
+}
+.firm #dsl{
+    width: 254px;
+    height: 128px;
+    margin-top: 10px;
+}
+.firm #boss{
+    width: 170px;
+    height: 168px;
+    margin-top: -11px;
+}
+.cm{
+    width: 100%;
+    height: auto;
+    padding: 15px 40px;
+    position: relative;
+    margin: 10px 0px 25px 0px;
+    display: block;
+    text-align: center;
+    background: linear-gradient(to bottom, transparent 0, rgba(0, 0, 0, .01) 2%, rgba(0, 0, 0, 0.11) 136%);
+}
+.cm h4{
+    font-size: 37px;
+    margin-top: 55px;
+    font-family: 'Teko';
+    letter-spacing: 2px;
+}
+.cm img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%; 
+    margin: 0 auto;
+    margin-top: 15px;
+}
+.cm #p2{
+    color: #72706d;
+    margin-top: 25px;
+}
+.cm #p1{
+    font-size: 36px;
+    margin: 20px 0px 40px 0px;
+    font-family: 'Teko';
+    letter-spacing: 2px;
+}
+.second{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 10px;
+    display: flex;
+}
+.second .left{
+    width: 41%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+.second .left:hover{
+    scale: 1.06;
+    transition: 0.5s;
+}
+.second img{
+    transition: 0.5s;
+}
+.second .left .imgdiv{
+    width: 100%;
+    height: 435px;
+    background-color: #e1e1e1;
+    display: flex;
+    border-radius: 6px;
+    justify-content: center;
+}
+.second .left  p{
+    font-size: 23px;
+    font-family: 'Teko', sans-serif;
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.second .left button{
+    padding: 9px;
+    border: 0;
+    border-radius: 14px;
+    position: relative;
+    top: -40px;
+    text-align: center;
+    left: 90%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.second .left button:hover{
+    scale: 1.10;
+    transition: 0.3s;
+}
+.second .right{
+    width: 57%;
+    height: 100%;
+    position: relative;
+    left: 25px;
+}
+.item-info span{  
+    margin-left: 27px;
+    position: relative;
+    top: 28px;
+}
+.second .right .top{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.second .right .top #productss{
+    width: 31%;
+    height: 100%;
+    position: relative;
+    transition: 0.5s;
+}
+.second .right .top:hover{
+    scale: 0.96;
+    transition: 0.5s;
+}
+.second .right .top #productss .imgdiv,
+.second .right .bottom #productss .imgdiv{
+    width: 100%;
+    border-radius: 6px;
+    height: 200px;
+    background-color: #e1e1e1;
+    display: flex;
+    justify-content: center;
+}
+.second .right .top #productss p,
+.second .right .bottom #productss p{
+    font-size: 23px;
+    font-family: 'Teko', sans-serif;
+    display: block;
+    text-align: left;
+    letter-spacing: 2px;
+}
+.second .right .top #productss .product-price,
+.second .right .bottom #productss .product-price{
+    margin-top: -10px;
+}
+.second .right  #productss button{
+    padding: 9px;
+    border: 0;
+    border-radius: 14px;
+    position: relative;
+    top: -45px;
+    text-align: center;
+    left: 81%;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.second .right #productss button:hover{
+    scale: 1.10;
+    transition: 0.3s;
+}
+.second .right .bottom{
+    width: 100%;
+    height: 50%;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+.second .right .bottom #productss{
+    width: 31%;
+    height: 100%;
+    position: relative;
+}
+.view{
+    width: 100%;
+    height: 53px;
+    position: relative;
+    margin-top: 40px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.view button{
+    border-radius: 58px;
+    padding: 17px;
+    padding-left: 40px;
+    padding-right: 40px;
+    letter-spacing: 0px;
+    font-size: 15px;
+    font-family: 'Source Code Pro', monospace;
+    border: 1px solid;
+    color: white;
+    background-color: #353535;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.view button:hover{
+    color: #353535;
+    transition: 0.3s;
+    scale: 1.06;
+    background-color: white;
+}
+footer{
+    width: 100%;
+    height: auto;
+    background-color: #f3f4f6;
+    /* background-color: #b2bfd9; */
+    margin-top: 29px;
+    display: block;
+}
+footer a{
+    text-decoration: none;
+}
+footer .top{
+    width: 100%;
+    height: 180px;
+    display: grid;
+    border-bottom: 1px solid;
+    border-color: #d8cdbe;
+    text-align: center;
+    overflow: hidden;
+    place-items: center;
+    justify-content: center;
+}
+footer .top img{
+    margin-top: -140px;
+}
+footer .bottom{
+    width: 100%;
+    height: 65%;
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    grid-gap: 11rem;
+}
+footer h4 {
+    font-family: 'Teko', sans-serif;
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+footer p{
+    font-size: 19px;
+    margin: 12px 12px 12px 0px;
+}
+footer .social .flex{
+    display: flex;
+    width: 180px;
+    justify-content: space-between;
+}
+footer .social .scl{
+    width: 50px;
+    
+    height: 50px;
+    transition: 0.5s;
+    background-color: black;
+    border-radius: 30%;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+    place-items: center;
+}
+footer .social .scl i {
+    color: white;
+    transition: 0.5s;
+}
+footer .social .scl:hover{
+    transform: scale(1.06);
+    background-color: white;
+}
+footer .social .scl:hover i {
+    color: black;
+}
+.dual-color-icon {
+    background: linear-gradient(to bottom, #a9ddf3 50%, #f79e1b 50%);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@media (min-width:1579px) and (min-height: 826px){
+    .products{
+        grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    }
+}
+@media (max-width: 1260px){
+    .newarr h1 {
+        font-size: 76px;
+    }
+    .newarr .div {
+        top: 3%;
+    }
+    .newarr h2 {
+        font-size: 148px;
+    }
+    .newarr {
+        top: 48px;
+        height: 238px;
+    }
+}
+@media (max-width: 1244px){
+    nav #bag {
+        left: 88%;
+    }
+}
+@media (max-width: 1160px){
+    nav #bag {
+        left: 92%;
+    }
+}
+@media (max-width: 1078px){
+    .newarr h1 {
+        font-size: 62px;
+    }
+    .newarr h2 {
+        font-size: 132px;
+    }
+    .newarr {
+        height: 190px;
+    }
+}
+@media (max-width: 1007px){
+    .firm {
+        top: 0px;
+    }
+    .second{
+        margin-top: -10px;
+    }
+    .firm #lac{
+        width: 15%;
+        height: 143px;
+        margin-top: -1px;
+    }
+    .firm #ck{
+        width: 16%;
+        margin-top: 26px;
+        height: 130px;
+    }
+    .firm #dsl{
+        width: 20%;
+        height: 98px;
+        margin-top: 32px;
+    }
+    .firm #tomy{
+        width: 20%;
+    }
+    .firm #boss{
+        width: 17%;
+        margin-top: -9px;
+    }
+}
+@media (max-width: 982px){
+    .design .main .txt {
+        left: 4%;
+    }
+}
+@media (max-width: 919px){
+    .design .main .txt h2{
+        letter-spacing: 6px;
+    }
+    .design .main .des{
+        left: 18px;
+    }
+}
+@media (max-width: 889px){
+    .design .main .des #shape{
+        width: 164%;
+    }
+    .design .main .txt {
+        left: -6%;
+        z-index: 2;
+    }
+}
+@media (max-width: 970px){
+    .newarr h1{
+        letter-spacing: 25px;
+    }
+}
+/* . */
+@media (max-width: 984px){
+    nav ul {
+        margin-left: 34%;
+    }
+}
+@media (max-width: 927px){
+    .second {
+        width: 100%;
+        height: 990px;
+        position: relative;
+        margin-top: -18px;
+    }
+    .second .left {
+        width: 41%;
+        height: 100%;
+        position: relative;
+        left: 30%;
+    }
+    .second .right {
+        width: 100%;
+        height: 49%;
+        position: absolute;
+        top: 507px;
+        left: 0%;
+    }
+    .second .right .top {
+        width: 100%;
+        height: 50%;
+        position: relative;
+        left: 0;
+        top: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+/*  */
+@media (max-width:850px){
+    .newarr h1 {
+        font-size: 56px;
+        letter-spacing: 22px;
+    }
+    .newarr {
+        height: 172px;
+    }
+    .newarr h2 {
+        font-size: 111px;
+    }
+    nav #bag {
+        left: 94%;
+    }
+}
+/*  */
+@media (max-width: 875px){
+    nav #bag {
+        left: 91%;
+    }
+    nav #logo{
+        left: -9px;
+    }
+    nav #ul1 {
+        list-style: none;
+        display: none;
+        font-size: 16px;
+        margin-top: 81px;
+        margin-left: 0;
+        width: 100%;
+        height: 365px;
+        background: whitesmoke;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    nav #ul1 li {
+        padding: 33px;
+    }
+    nav #menu{
+        display: block;
+        cursor: pointer;
+    }
+}
+@media (max-width: 800px){
+    .design .main #h1 {
+        font-size: 120px;
+        top: 228px;
+        left: -128px;
+    }
+    .design .main #p1 {
+        top: 240px;
+        left: -47px;
+        font-size: 23px;
+    }
+    .design .main #h2 {
+        font-size: 120px;
+        top: 228px;
+        left: -35px;
+    }
+    .design .main #p2 {
+        top: 348px;
+        right: -41px;
+        font-size: 23px;
+    }
+    .design .main #hood {
+        width: 350px;
+        height: 480px;
+    }
+    .firm #boss {
+        width: 17%;
+        margin-top: 11px;
+        height: 150px;
+    }
+    .firm #dsl {
+        height: 99px;
+    }
+    .second .left {
+        width: 61%;
+        left: 20%;
+    }
+}
+@media (max-width: 768px){
+    .design .main .des #shape{
+        display: none;
+    }
+    .design .main .des #des2 {
+        left: -485px;
+    }
+    .design .main .txt {
+        left: 41%;
+    }
+}
+@media (max-width: 780px){
+    .firm #lac {
+        width: 15%;
+        height: 130px;
+        margin-top: 7px;
+    }
+    .firm #ck {
+        width: 16%;
+        margin-top: 32px;
+        height: 117px;
+    }
+    .firm #dsl {
+        height: 82px;
+        margin-top: 44px;
+    }
+    .firm #tomy {
+        width: 20%;
+        height: 130px;
+        margin-top: 18px;
+    }
+    .firm #boss {
+        height: 138px;
+    }
+}
+@media (max-width: 768px){
+    .newarr h1 {
+        font-size: 55px;
+        letter-spacing: 5px;
+    }
+    .newarr {
+        top: 51px
+    }
+    .newarr .div {
+        top: 19%;
+    }
+    .newarr h2 {
+        font-size: 81px;
+        letter-spacing: 14px;
+    }
+}
+@media (max-width:685px){
+    .design .main #p1 {
+        top: 236px;
+        left: -13px;
+        font-size: 21px;
+    }
+    .design .main #h1 {
+        font-size: 102px;
+        top: 228px;
+        left: -89px;
+        letter-spacing: 4px;
+    }
+    .design .main #hood {
+        width: 319px;
+        height: 447px;
+        margin-top: 16px;
+    }
+    .design .main #h2 {
+        font-size: 102px;
+        top: 228px;
+        left: -33px;
+        letter-spacing: 4px;
+    }
+    .design .main #p2 {
+        top: 327px;
+        right: -14px;
+        font-size: 21px;
+        height: 0;
+        letter-spacing: 1px;
+    }
+}
+@media (max-width: 680px){
+    .design .main .des #des2 {
+        left: -460px;
+    }
+}
+@media (max-width: 589px){
+    .design {
+        height: 529px;
+    }
+    .design .main .des #des2 {
+        left: -381px;
+        height: 478px;
+    }
+    .design .main .txt {
+        left: 52%;
+    }
+    .design .main .txt p {
+        font-size: 48px;
+        font-family: 'Teko', sans-serif;
+        letter-spacing: 0px;
+        font-weight: unset;
+    }
+    .design .main .txt h2 {
+        letter-spacing: 1px;
+        font-size: 40px;
+    }
+    .design button{
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+}
+@media (max-width: 630px){
+    .firm{
+        height: 136px;
+    }
+    .firm #lac {
+        width: 16%;
+        height: 112px;
+        margin-top: 7px;
+    }
+    .firm #ck {
+        margin-top: 32px;
+        height: 96px;
+    }
+    .firm #dsl {
+        height: 66px;
+        margin-top: 44px;
+    }
+    .firm #tomy {
+        width: 20%;
+        height: 125px;
+        margin-top: 18px;
+    }
+    .firm #boss {
+        height: 116px;
+        margin-top: 12px;
+    }
+}
+@media (max-width: 546px){
+    .design .main .txt {
+        left: 42%;
+    }
+    .design .main .des #des2 {
+        left: -371px;
+    }
+}
+@media (max-width: 563px){
+    .design .main #hood {
+        width: 289px;
+        height: 418px;
+        margin-top: 53px;
+    }
+    .design .main #p1 {
+        top: 245px;
+        left: -5px;
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+    .design .main #h1 {
+        font-size: 85px;
+        top: 241px;
+        left: -69px;
+        letter-spacing: 2px;
+    }
+    .design .main #h2 {
+        font-size: 85px;
+        top: 242px;
+        left: -28px;
+        letter-spacing: 2px;
+    }
+    .design .main #p2 {
+        top: 327px;
+        right: 0px;
+        font-size: 19px;
+        letter-spacing: 1px;
+    }
+    .firm #lac {
+        width: 26%;
+        height: 123px;
+        margin-top: 7px;
+    }
+    .firm #ck {
+        width: 24%;
+        margin-top: 32px;
+        margin-left: 32px;
+        height: 108px;
+    }
+    .firm #dsl {
+        height: 78px;
+        margin-top: 44px;
+        width: 43%;
+        margin-left: 31px;
+    }
+    .firm #tomy {
+        width: 31%;
+        height: 134px;
+        margin-top: 18px;
+        position: relative;
+        top: 63px;
+        left: -207px;
+    }
+    .firm #boss {
+        width: 54%;
+        height: 116px;
+        margin-top: 12px;
+        position: relative;
+        top: 73px;
+        left: -488px;
+    }
+    .second .left {
+        width: 100%;
+        left: 0%;
+    }
+}
+@media (max-width: 557px){
+    .newarr h1 {
+        font-size: 46px;
+        letter-spacing: 4px;
+    }
+    .newarr {
+        height: 139px;
+    }
+    .newarr h2 {
+        font-size: 73px;
+        letter-spacing: 10px;
+    }
+    .newarr .div {
+        top: 17%;
+    }
+    .second{
+        margin-top: 55px;
+    }
+}
+@media (max-width: 547px){
+    footer .bottom{
+        padding-bottom: 20px;
+        grid-gap: 4rem;
+    }
+}
+@media (max-width: 535px){
+    nav #menu {
+        left: 82%;
+    }
+    .second {
+        height: 2043px
+    }
+    .second .right {
+        width: 100%;
+        height: 49%;
+        position: absolute;
+        top: 507px;
+        left: 0%;
+    }
+    .second .right .top {
+        width: 100%;
+        height: 26%;
+        position: relative;
+        left: 0;
+        top: 0;
+        display: block;
+    }
+    .second .right .top #productss,
+    .second .right .bottom #productss{
+        width: 100%;
+        height: 100%;
+    }
+    .second .right .bottom {
+        width: 100%;
+        height: 26%;
+        position: relative;
+        left: 0;
+        bottom: 0;
+        display: block;
+        justify-content: space-between;
+        margin-top: 526px;
+    }
+}
+@media (max-width: 519px){
+    .design .main .images {
+        width: 102%;
+    }
+    .design .main .images .imgs {
+        width: 20%;
+        height: 105px;
+    }
+}
+@media (max-width: 489px){
+    body{
+        padding: 15px;
+    }
+    .cart{
+        margin-right: 0;
+    }
+    .design .main #p1 {
+        top: 245px;
+        left: 0px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .design .main #h1 {
+        font-size: 79px;
+        top: 241px;
+        left: -60px;
+        letter-spacing: 1px;
+    }
+    .design .main #hood {
+        width: 272px;
+        height: 393px;
+        margin-top: 64px;
+    }
+    .design .main #h2 {
+        font-size: 79px;
+        top: 242px;
+        left: -28px;
+        letter-spacing: 2px;
+    }
+    .design .main #p2 {
+        top: 318px;
+        right: 0px;
+        font-size: 18px;
+        height: 0;
+        letter-spacing: 1px;
+    }
+}
+@media (max-width:446px){
+    .newarr h1 {
+        font-size: 40px;
+        letter-spacing: 2px;
+    }
+    .newarr h2 {
+        font-size: 65px;
+        margin-left: 17px;
+    }
+    .newarr {
+        height: 124px;
+    }
+}
+@media (max-width: 460px){
+    .design {
+        height: 508px;
+    }
+    .design .main .txt {
+        left: 51%;
+    }
+    .design .main .txt p {
+        font-size: 43px;
+    }
+    .design .main .txt h2 {
+        letter-spacing: 1px;
+        font-size: 34px;
+    }
+    .design button {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .design .main .des #des2 {
+        left: -330px;
+        height: 457px;
+    }
+}
+@media (max-width:435px){
+    .design .main #p1 {
+        top: 247px;
+        left: -6px;
+        font-size: 17px;
+        letter-spacing: 0px;
+    }
+    .cart {
+        width: 94%;
+    }
+    .design .main #h1 {
+        font-size: 72px;
+        top: 245px;
+        left: -56px;
+        letter-spacing: 1px;
+    }
+    .design .main #hood {
+        width: 63%;
+        height: 55%;
+        margin-top: 92px;
+    }
+    .design .main #h2 {
+        font-size: 72px;
+        top: 242px;
+        left: -28px;
+        letter-spacing: 2px;
+    }
+    .design .main #p2 {
+        top: 312px;
+        right: -1px;
+        font-size: 17px;
+        height: 0;
+        letter-spacing: 0;
+    }
+    .firm #boss{
+        left: -449px;
+    }
+    .firm #tomy{
+        left: -188px;
+    }
+}
+@media (max-width: 431px){
+    .design .main .txt {
+        left: 45%;
+    }
+}
+@media (max-width: 425px){
+    .firm #dsl {
+        height: 70px;
+        margin-top: 50px;
+        width: 30%;
+        margin-left: 31px;
+    }
+    footer .top img{
+        margin-top: -90px;
+        width: 450px;
+    }
+}
+@media (max-width: 414px){
+    .firm #tomy {
+        left: -160px;
+        height: 125px;
+        top: 67px;
+    }
+    .firm #boss {
+        left: -411px;
+    }
+    .newarr h1{
+        -webkit-text-stroke-width: 1px;
+    }
+    nav #logo{
+        left: -23px;
+    }
+}
+@media (max-width: 411px){
+    .design {
+        height: 439px;
+    }
+    .design .main .txt p {
+        font-size: 38px;
+    }
+    .design .main .txt h2 {
+        letter-spacing: 1px;
+        font-size: 30px;
+    }
+    .design button {
+        width: 183px;
+        padding: 12px;
+        font-size: 14px;
+    }
+    .design .main .des #des2 {
+        left: -304px;
+        height: 388px;
+    }
+}
+@media (max-width:420px){
+    .remove-from-cart{
+        left: 20px;
+    }
+}
+@media (max-width: 371px){
+    .design .main .txt {
+        left: 40%;
+        z-index: 5;
+    }
+}
+@media (max-width: 384px){
+    .newarr h1{
+        margin-left: 4px;
+    }
+    .firm #tomy {
+        width: 37%;
+    }
+    .products .item-info{
+        position: relative;
+        left: -5%;
+    }
+}
+@media (max-width: 360px){
+    footer .top img {
+        margin-top: -75px;
+        width: 420px;
+    }
+}

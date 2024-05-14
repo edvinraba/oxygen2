@@ -1,0 +1,120 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Teko', sans-serif;
+    background-color: #f5f5f5;
+    overflow: auto;
+}
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(#353535);
+}
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#353535, #353535);
+    border-radius: 10px;
+}
+::-webkit-scrollbar-track {
+    background:#f5f5f5;
+}
+nav{
+    width: 100%;
+    height: 90px;
+    background-color:#f5f5f5;
+    text-align: center;
+}
+nav h1{
+    font-size: 70px;
+    letter-spacing: 5px;
+}
+.main{
+    width: 88%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 100px;
+    display: flex;
+}
+a{
+    text-decoration: none;
+    width: 100%;
+    color: #353535;
+}
+.main .dsh{
+    z-index: 100;
+    background-color: #f5f5f5;
+    width: 88%;
+    height: 330px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.7s;
+    border-right: 6px solid #353535;
+    border-left: 6px solid #353535;
+    display: flex;
+    justify-content: center;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    margin-right: 42px;
+}
+.main .dsh h1{
+    transition: 0.5s;
+    font-size: 39px;
+    letter-spacing: 1px;
+    z-index: -1;
+}
+.ndryshe .dsh{
+    width: 100%;
+}
+.ndryshe .dsh{
+    border-top: 6px solid #353535;
+    border-right: none;
+    border-left: none;
+    border-bottom: 6px solid #353535;
+}
+.main .dsh:hover{
+    scale: 0.97;
+    transition: 0.5s;
+}
+#icon{
+    width: 150px;
+    height: 150px;
+}
+.design{
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: 135uu0px;
+    overflow: hidden;
+    z-index: -1;
+}
+#b{
+    z-index: -1;
+    display: block;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+    letter-spacing: 22px;
+    color: black;
+    font-family: sans-serif;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    opacity: 0.1;
+    margin: 0;
+    padding: 0;
+}
+#z{
+    display: block;
+    text-align: center;
+    justify-content: center;
+    font-size: 100px;
+    letter-spacing: 13px;
+    color: black;
+    font-family: sans-serif;
+    -webkit-text-stroke-width: 2px;
+    opacity: 0.1;
+    margin: 0;
+    padding: 0;
+}
